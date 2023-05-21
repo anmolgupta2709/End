@@ -1,0 +1,112 @@
+[{
+        "deptName": "CSE",
+        "deptId": "1",
+        "courses": [{
+                "courseName": "CSE 101",
+                "academicYear": "2019-20",
+                "courseId": "1",
+                "semesters": [{
+                        "semesterName": "Sem 1",
+                        "semesterId": "1"
+                    },
+                    {
+                        "semesterName": "Sem 2",
+                        "semesterId": "2"
+                    }
+                ]
+            },
+            {
+                "courseName": "CSE 102",
+                "academicYear": "2020-21",
+                "courseId": "2",
+                "semesters": [{
+                        "semesterName": "Sem 1",
+                        "semesterId": "1"
+                    },
+                    {
+                        "semesterName": "Sem 3",
+                        "semesterId": "2"
+                    },
+                    {
+                        "semesterName": "Sem 5",
+                        "semesterId": "3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "deptName": "ECE",
+        "deptId": "2",
+        "courses": [{
+                "courseName": "ECE 101",
+                "academicYear": "2021-22",
+                "courseId": "3",
+                "semesters": [{
+                        "semesterName": "Sem 1",
+                        "semesterId": "1"
+                    },
+                    {
+                        "semesterName": "Sem 3",
+                        "semesterId": "2"
+                    }
+                ]
+            },
+            {
+                "courseName": "ECE 102",
+                "academicYear": "2022-23",
+                "courseId": "4",
+                "semesters": [{
+                        "semesterName": "Sem 4",
+                        "semesterId": "1"
+                    },
+                    {
+                        "semesterName": "Sem 5",
+                        "semesterId": "2"
+                    },
+                    {
+                        "semesterName": "Sem 6",
+                        "semesterId": "3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "deptName": "IT",
+        "deptId": "3",
+        "courses": [{
+                "courseName": "IT 101",
+                "academicYear": "2023-24",
+                "courseId": "5",
+                "semesters": [{
+                        "semesterName": "Sem 1",
+                        "semesterId": "1"
+                    },
+                    {
+                        "semesterName": "Sem 2",
+                        "semesterId": "2"
+                    },
+                    {
+                        "semesterName": "Sem 3",
+                        "semesterId": "3"
+                    }
+                ]
+            },
+            {
+                "courseName": "IT 102",
+                "academicYear": "2024-25",
+                "courseId": "6",
+                "semesters": [{
+                        "semesterName": "Sem 1",
+                        "semesterId": "1"
+                    },
+                    {
+                        "semesterName": "Sem 2",
+                        "semesterId": "2"
+                    }
+                ]
+            }
+        ]
+    }
+]

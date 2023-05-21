@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Selector Illustration</title>
+    <style>
+        /* Universal Selector */
+        
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Element Selector */
+        
+        h1 {
+            color: blue;
+        }
+        /* Class Selector */
+        
+        .highlight {
+            background-color: yellow;
+        }
+        /* ID Selector */
+        
+        #header {
+            font-size: 24px;
+        }
+        /* Attribute Selector */
+        
+        input[type='text'] {
+            border: 1px solid gray;
+        }
+        /* Descendant Selector */
+        
+        ul li {
+            color: green;
+        }
+        /* Child Selector */
+        
+        ul>li {
+            font-weight: bold;
+        }
+        /* Adjacent Sibling Selector */
+        
+        h2+p {
+            margin-top: 20px;
+        }
+        /* General Sibling Selector */
+        
+        h2~p {
+            color: red;
+        }
+        /* Pseudo-class Selector */
+        
+        a:hover {
+            color: purple;
+        }
+        /* Pseudo-element Selector */
+        
+        p::first-line {
+            font-weight: bold;
+        }
+        /* :not() Selector */
+        
+        input:not([type='submit']) {
+            background-color: lightgray;
+        }
+        /* :nth-child() Selector */
+        
+        ul li:nth-child(odd) {
+            background-color: lightblue;
+        }
+        /* :nth-of-type() Selector */
+        
+        div:nth-of-type(2n) {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Element Selector</h1>
+
+    <p class="highlight">Class Selector</p>
+
+    <p id="header">ID Selector</p>
+
+    <input type="text" placeholder="Attribute Selector" />
+
+    <ul>
+        <li>Descendant Selector</li>
+        <li>Child Selector</li>
+        <li>Adjacent Sibling Selector</li>
+        <li>General Sibling Selector</li>
+    </ul>
+
+    <h2>Pseudo-class Selector</h2>
+    <p><a href="#">Hover over me!</a></p>
+
+    <h2>Pseudo-element Selector</h2>
+    <p>This is the first line of text. The first line will have bold font weight.</p>
+
+    <input type="text" placeholder="Not Selector" />
+
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+    </ul>
+
+    <div>This is div 1</div>
+    <div>This is div 2</div>
+    <div>This is div 3</div>
+    <div>This is div 4</div>
+    <div>This is div 5</div>
+</body>
+
+</html>

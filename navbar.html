@@ -1,0 +1,103 @@
+<!-- Create a navbar, enable light and dark theme, the content should adjust from horizontal to vertical stack according to the screen size -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>Responsive Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Styling for the navbar */
+        
+        .navbar {
+            background-color: #d6d5d5;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .navbar-item {
+            margin-right: 10px;
+        }
+        /* Styling for the light theme */
+        
+        .light-theme {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        /* Styling for the dark theme */
+        
+        .dark-theme {
+            background-color: #333;
+            color: #f2f2f2;
+        }
+        /* Media query for screens smaller than or equal to 768px */
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            .navbar-item {
+                margin-bottom: 10px;
+            }
+        }
+        
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .main-dark-theme {
+            background-color: #090909;
+            color: #fefefe;
+        }
+        
+        .main-light-theme {
+            background-color: #fefefe;
+            color: #090909;
+        }
+    </style>
+</head>
+
+<body ng-controller="myCtrl">
+    <!-- Navbar -->
+    <nav class="navbar" ng-class="{ 'light-theme': theme === 'light', 'dark-theme': theme === 'dark' }">
+        <div class="navbar-item">Home</div>
+        <div class="navbar-item">About</div>
+        <div class="navbar-item">Contact</div>
+        <div class="navbar-item">Services</div>
+        <div class="navbar-item">Portfolio</div>
+        <div class="navbar-item">Blog</div>
+        <div class="navbar-item">Login</div>
+    </nav>
+    <main ng-class="{ 'main-light-theme': theme === 'light', 'main-dark-theme': theme === 'dark' }">
+        Click the button below to toggle between themes
+        <button ng-click="toggleTheme()">Change to {{theme === 'light' ? 'Dark' : 'Light'}} Theme</button>
+    </main>
+
+    <!-- AngularJS Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        angular.module('myApp', []).controller('myCtrl', function($scope) {
+            // Set the initial theme
+            $scope.theme = 'light';
+
+            // Toggle between light and dark themes
+            $scope.toggleTheme = function() {
+                $scope.theme = $scope.theme === 'light' ? 'dark' : 'light';
+            };
+        });
+    </script>
+</body>
+
+</html>

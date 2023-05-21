@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Routing Example</title>
+    <link rel="stylesheet" href="/model_questions//Routing_between_main_page//style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#!/">Home</a></li>
+                <li><a href="#!/solar-eclipse">Solar Eclipse</a></li>
+                <li><a href="#!/water">Water</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div ng-view></div>
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+
+        // Configure the routes
+        app.config(function($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.html"
+                })
+                .when("/solar-eclipse", {
+                    templateUrl: "solarEclipse.html"
+                })
+                .when("/water", {
+                    templateUrl: "water.html"
+                })
+                .otherwise({
+                    redirectTo: "/"
+                });
+        });
+    </script>
+</body>
+
+</html>

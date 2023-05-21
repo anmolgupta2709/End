@@ -1,0 +1,93 @@
+<!-- AngularJS animation - create two checkboxes with labels and create a div box with black border, when the first checkbox is checked the div box should move up and when unchecked should come down. When the second box is clicked the div box color should
+turn yellow. Make the transitions smooth. -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+        /* The starting CSS styles for the enter animation */
+        
+        .moveUpDown.ng-enter {
+            transition: 0.5s ease-in-out all;
+            transform: translateY(100px);
+        }
+        /* The finishing CSS styles for the enter animation */
+        
+        .moveUpDown.ng-enter.ng-enter-active {
+            transform: translateY(0px);
+        }
+        /* The starting CSS styles for the leave animation */
+        
+        .moveUpDown.ng-leave {
+            transition: 0.5s ease-in-out all;
+            transform: translateY(0px);
+        }
+        /* The finishing CSS styles for the leave animation */
+        
+        .moveUpDown.ng-leave.ng-leave-active {
+            transform: translateY(100px);
+        }
+        
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            margin: 20px 0px;
+            width: fit-content;
+            padding: 10px;
+            transition: 0.7s ease-in-out all;
+        }
+        
+        .highlight.on-add {
+            background: white;
+        }
+        
+        .highlight.on {
+            background: yellow;
+        }
+        
+        .highlight.on-remove {
+            background: whilte;
+        }
+    </style>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh">
+    <div ng-if="moveUp" ng-class="{on:changeColor}" class="moveUpDown highlight container">
+        <p>Hello World!</p>
+    </div>
+
+    <div>
+        <input type="checkbox" ng-model="moveUp" /><label>
+        Check this checkbox to make the div move up and uncheck it to move it down
+      </label>
+    </div>
+
+    <div>
+        <input type="checkbox" ng-model="changeColor" /><label> Check this checkbox to make the div change color </label>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-animate.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngAnimate']);
+        app.controller('myCtrl', function($scope) {
+            $scope.moveUp = true;
+            $scope.changeColor = true;
+        });
+    </script>
+</body>
+
+</html>

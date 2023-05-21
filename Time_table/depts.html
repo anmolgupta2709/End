@@ -1,0 +1,6 @@
+<h1>College Name</h1>
+<p>Select a departement below to view it's course-wise time table.</p>
+
+<div ng-repeat="dept in depts" class="dept-contaniner">
+    <a href="#!/dept/{{dept.deptName}}">{{dept.deptName}}</a>
+</div>

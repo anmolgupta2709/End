@@ -1,0 +1,102 @@
+<!-- Use CSS3 to implement advanced border styles, text effects, transforms -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+            transition: all;
+            transition-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+        
+        div:hover {
+            box-shadow: 0px 0px 10px #888888;
+        }
+        
+        h1 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            text-shadow: 1px 1px 3px #717171;
+            font-size: 20px;
+        }
+        
+        .container-1 {
+            border: 2px solid #000;
+        }
+        
+        .container-2 {
+            border: 2px dashed #000;
+        }
+        
+        .container-3 {
+            border: 2px double #000;
+        }
+        
+        .container-1:hover {
+            transform: rotate(10deg);
+        }
+        
+        .container-2:hover {
+            transform: translateX(40px);
+        }
+        
+        .container-3:hover {
+            transform: skew(10deg) scale(1.2) translateY(30px);
+        }
+        
+        .text-styling-1 {
+            color: #ff9292;
+            font-weight: bold;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        
+        .text-styling-2 {
+            color: #8b95f0;
+            font-weight: medium;
+            text-transform: lowercase;
+            font-style: italic;
+        }
+        
+        .text-styling-3 {
+            color: #d3f08b;
+            font-weight: lighter;
+            text-transform: capitalize;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      height: 100vh;
+    ">
+    <div class="container-1">
+        <h1 class="text-styling-1">Hello, World!</h1>
+        <p>
+            This is an example of text styling (uppercase, underline, bold, text-shadow) and border styling (solid) using CSS.
+        </p>
+    </div>
+    <div class="container-2">
+        <h1 class="text-styling-2">Hello, World!</h1>
+        <p>
+            This is an example of text styling (lowercase, medium, italic) and border styling (dashed) using CSS.
+        </p>
+    </div>
+    <div class="container-3">
+        <h1 class="text-styling-3">Hello, World!</h1>
+        <p>
+            This is an example of text styling (captitalize, lighter, oblique) and border styling (double) using CSS.
+        </p>
+    </div>
+</body>
+
+</html>

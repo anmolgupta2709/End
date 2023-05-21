@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Table</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body ng-app="myApp">
+    <div style="display: flex;">
+        <nav>
+            <ul>
+                <li><a href="#!/">Home</a></li>
+                <hr />
+                <li><a href="#!/">Research</a></li>
+                <hr />
+                <li><a href="#!/">Admissions</a></li>
+                <hr />
+                <div class="tt-top">
+                    Time Table
+                    <div class="tt">
+                        <a href="#!/dept">Course wise TT</a>
+                        <a href="#!/">Teacher wise TT</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <div style="flex-grow: 1; padding-left: 2rem;" ng-view></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

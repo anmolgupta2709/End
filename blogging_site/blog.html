@@ -1,0 +1,7 @@
+<h1>Blogging Page</h1>
+<p>Welcome to my blog! Here, you can find interesting articles and posts.</p>
+
+<div class="blog-post {{isDarkTheme && 'blog-post-dark'}}" ng-repeat="blog in blogs">
+    <h2>{{blog.blogTitle}}</h2>
+    <a href="#!/blog/{{blog.blogId}}">Visit</a>
+</div>

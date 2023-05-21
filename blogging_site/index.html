@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="blogApp">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/model_questions/blogging_site/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-controller="mainController" class="{{isDarkTheme ? 'body-dark' : 'body-light'}}">
+    <header class="{{isDarkTheme ? 'header-dark' : 'header-light'}}">
+        <nav>
+            <ul>
+                <li>
+                    <a class="{{isDarkTheme ? 'a-dark': 'a-light'}}" href="#!/blog">Blogging</a
+            >
+          </li>
+          <li>
+            <a class="{{isDarkTheme ? 'a-dark': 'a-light'}}" href="#!/contacts"
+              >Contacts</a
+            >
+          </li>
+          <li>
+            <a class="{{isDarkTheme ? 'a-dark': 'a-light'}}" href="#!/about"
+              >About</a
+            >
+          </li>
+        </ul>
+        <button ng-click="toggleTheme()">
+          Toggle {{isDarkTheme ? 'Light' : 'Dark'}} Theme
+        </button>
+      </nav>
+    </header>
+
+    <article style="padding: 20px;">
+      <div ng-view></div>
+    </article>
+
+    <footer class="{{isDarkTheme ? 'footer-dark' : 'footer-light'}}">
+      <p>&copy; 2023 My Blog</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.min.js"></script>
+    <script src="/model_questions//blogging_site/app.js"></script>
+  </body>
+</html>
