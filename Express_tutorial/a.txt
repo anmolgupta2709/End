@@ -1,0 +1,13 @@
+node --version
+npm --version
+
+npm install -g <package-name>
+npm install <package-name>
+
+create folder cd
+npm init
+npm install --save express
+
+
+ls node_modules #(dir node_modules for windows)
+npm install -g nodemon

@@ -1,0 +1,55 @@
+Install dependencies: Start by creating a new Node.js project and install the mongodb package using npm or yarn.
+npm install mongodb
+
+
+
+Create a server-side JavaScript file, e.g., app.js, and require the necessary modules:
+const express = require('express');
+const mongodb = require('mongodb');
+
+const app = express();
+const MongoClient = mongodb.MongoClient;
+const url = 'mongodb://localhost:27017'; // MongoDB connection URL
+
+// Server setup and routes go here
+
+app.listen(3000, () => {
+  console.log('Server started on port 3000');
+});
+
+
+
+
+Define routes to handle database operations. For example, let's create a route to fetch all documents from a collection named "users":
+app.get('/users', (req, res) => {
+  MongoClient.connect(url, (err, client) => {
+    if (err) {
+      console.log('Error connecting to MongoDB:', err);
+      return res.status(500).send('Error connecting to MongoDB');
+    }
+
+    const db = client.db('your-database-name'); // Replace with your database name
+    const usersCollection = db.collection('users');
+
+    usersCollection.find().toArray((err, users) => {
+      if (err) {
+        console.log('Error querying users:', err);
+        return res.status(500).send('Error querying users');
+      }
+
+      res.json(users);
+      client.close();
+    });
+  });
+});
+
+
+
+
+Customize the code according to your specific requirements, including adding additional routes for other operations like inserting, updating, or deleting documents.
+
+
+
+Start the server: Run the following command in the terminal to start the server:
+
+node app.js
