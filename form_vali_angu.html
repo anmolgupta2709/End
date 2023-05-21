@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="FormController">
+    <form name="myForm" ng-submit="submitForm()" novalidate>
+        <label>Name:</label>
+        <input type="text" name="name" ng-model="formData.name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" ng-model="formData.email" required>
+
+        <label>Password:</label>
+        <input type="password" name="password" ng-model="formData.password" required>
+
+        <button type="submit" ng-disabled="myForm.$invalid">Submit</button>
+    </form>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('FormController', function($scope) {
+                $scope.formData = {};
+
+                $scope.submitForm = function() {
+                    if ($scope.myForm.$valid) {
+                        // Form is valid, perform further processing or submit the data
+                        console.log('Form submitted:', $scope.formData);
+                    } else {
+                        // Form is invalid, display error messages or prevent submission
+                        console.log('Form is invalid');
+                    }
+                };
+            });
+    </script>
+</body>
+
+</html>

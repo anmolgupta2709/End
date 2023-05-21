@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 2b DOM Manipulation</title>
+</head>
+
+<body>
+    <h1 id="title">DOM Manipulation</h1>
+    <p id="paragraph">Hello World</p>
+    <button onclick="changeText()">Manipulate</button>
+
+    <script>
+        function changeText() {
+            var title = document.getElementById("title");
+            var paragraph = document.getElementById("paragraph");
+
+            title.textContent = "Manipulated";
+            paragraph.textContent = "Hello Web";
+
+            document.body.style.backgroundColor = "pink";
+        }
+    </script>
+</body>
+
+</html>

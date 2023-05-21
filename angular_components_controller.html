@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html ng-app="myApp">
+
+<head>
+    <title>Hello</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Hello">
+    <meta name="description" content="hi hello .">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+    <link rel="stylesheet" href="assets/navigation_bar/style.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.firstName = "hello";
+            $scope.lastName = "hi";
+        });
+    </script>
+
+
+
+    <link rel="icon" href="https://cdn.vox-cdn.com/thumbor/tYLe-ZvTGobtJ4HVghxJE1dXEYk=/0x0:362x336/1200x0/filters:focal(0x0:362x336):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10577949/Screen_Shot_2018_04_03_at_11.55.04_AM.png">
+    <style type="text/css">
+        p {
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body class="is-preload " ng-controller="myCtrl">
+
+    <!-- Wrapper -->
+
+    <div id="wrapper" class="divided">
+
+
+
+        <header class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="index.html">{{firstName}} {{lastName}}</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile menu"><a id="nav-toggle"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="Portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="Blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <!-- One-->
+        <section class="banner style3 ben orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <h1>Hi, I am <span id="retype">{{firstName}} {{lastName}}</span></h1>
+                <p class="major"> An avid learner.</p>
+                <ul class="actions ">
+                    <li><a href="Portfolio.html" class="button primary small wide smooth-scroll-middle">Portfolio</a></li>
+                    <li><a href="Blog.html" class="button primary small wide smooth-scroll-middle">Blogs</a></li>
+                    <li><a href="Contact.html" class="button primary small wide smooth-scroll-middle">Contact</a></li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="images/hello.JPG" alt="" />
+            </div>
+        </section>
+
+        <div class="mouse-down center">
+            <div class="bullet">
+            </div>
+        </div>
+
+        <!-- Two -->
+        <section class="wrapper style1 align-center">
+            <div class="inner">
+                <h2>About Me :)</h2>
+            </div>
+
+        </section>
+
+        <!-- Footer-->
+        <footer class="wrapper style1 align-center">
+            <div class="inner">
+                <ul class="icons" style="padding: 0;">
+                    <li><a href="https://www.linkedin.com/in/hellok/" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://medium.com/@hello" class="icon brands style2 fa-medium"><span class="label">Medium</span></a></li>
+                    <li><a href="https://twitter.com" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.instagram.com/hello/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="mailto:hello @gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/retype/script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="assets/navigation_bar/script.js"></script>
+
+</body>
+
+</html>

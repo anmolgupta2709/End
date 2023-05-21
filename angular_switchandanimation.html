@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .switch-container {
+            width: 100px;
+            height: 50px;
+            background-color: lightgray;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .switch-handle {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: left 0.3s, background-color 0.3s;
+        }
+        
+        .fade-animation {
+            transition: opacity 0.5s;
+        }
+        
+        .fade-in {
+            opacity: 1;
+        }
+        
+        .fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body ng-controller="SwitchController">
+    <div class="switch-container" ng-click="toggleSwitch()" ng-class="{'switch-on': isOn}">
+        <div class="switch-handle" ng-class="{'switch-handle-on': isOn}"></div>
+    </div>
+    <div class="fade-animation" ng-class="{'fade-in': isOn, 'fade-out': !isOn}">
+        <h1>Content to Fade In/Out</h1>
+    </div>
+    <script>
+        angular.module('myApp', [])
+            .controller('SwitchController', function($scope) {
+                $scope.isOn = false;
+
+                $scope.toggleSwitch = function() {
+                    $scope.isOn = !$scope.isOn;
+                };
+            });
+    </script>
+</body>
+
+</html>

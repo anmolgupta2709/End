@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Food Order Form</h1>
+
+    <form id="order-form" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <span class="error-message" id="name-error"></span>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <span class="error-message" id="email-error"></span>
+        <br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required>
+        <br>
+        <span class="error-message" id="phone-error"></span>
+        <br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+        <br>
+        <span class="error-message" id="address-error"></span>
+        <br>
+
+        <input type="submit" value="Place Order">
+    </form>
+
+    <script>
+        function validateForm() {
+            var nameInput = document.getElementById('name');
+            var emailInput = document.getElementById('email');
+            var phoneInput = document.getElementById('phone');
+            var addressInput = document.getElementById('address');
+
+            var nameError = document.getElementById('name-error');
+            var emailError = document.getElementById('email-error');
+            var phoneError = document.getElementById('phone-error');
+            var addressError = document.getElementById('address-error');
+
+            var namePattern = /^[A-Za-z\s]+$/;
+            var emailPattern = /^\S+@\S+\.\S+$/;
+            var phonePattern = /^\d{10}$/;
+
+            if (!namePattern.test(nameInput.value)) {
+                nameError.textContent = "Please enter a valid name";
+                return false;
+            } else {
+                nameError.textContent = "";
+            }
+
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.textContent = "Please enter a valid email";
+                return false;
+            } else {
+                emailError.textContent
+            }
+        }
